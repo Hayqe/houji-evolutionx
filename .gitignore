@@ -1,0 +1,14 @@
+# AOSP source tree + ccache: te groot en gegenereerd, nooit committen
+/src/
+/ccache/
+
+# Lokale tooling-config
+/.qwen/
+
+# Build logs
+*.log
+
+# Signing keys: NOOIT committen
+*.pk8
+*.pem
+/keys/
