@@ -11,6 +11,9 @@ if ! docker ps --format '{{.Names}}' | grep -qx houji-builder; then
   else
     echo "Creating houji-builder container..."
     docker run -d --name houji-builder \
+      --security-opt apparmor:unconfined \
+      --cap-add SYS_ADMIN \
+      --device /dev/fuse \
       -v "$(pwd)/src:/src" \
       -v "$(pwd)/ccache:/ccache" \
       evolutionx-builder sleep infinity

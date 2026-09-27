@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     ccache \
     curl \
+    erofs-utils \
+    erofsfuse \
     flex \
+    fuse \
+    fuse2fs \
     g++-multilib \
     gcc-multilib \
     git \
