@@ -42,14 +42,15 @@ src/out/target/product/houji/EvolutionX-16.0-<datum>-houji-11.11-Unofficial.zip
 
 ### Device tree
 
-houji staat **niet** op `Evolution-X-Devices` noch op `LineageOS` (beide 404 op
-`device_xiaomi_houji`). Dit moet worden uitgezocht:
+Gekozen basis: **`mvaisakh/android_device_xiaomi_houji`** (branch `lineage-23.2`),
+een LineageOS-tree voor de Xiaomi 14 (SM8650 / Snapdragon 8 Gen 3), van een
+ervaren SM8650-maintainer. De dependency-keten staat in `local_manifests/houji.xml`.
 
-1. Zoek een community-fork van een houji device tree (EvolutionX/LineageOS) die
-   compatibel is met branch `bka` — of port de LineageOS houji-tree naar `bka`.
-2. Vul `local_manifests/houji.xml` in (device tree + vendor + kernel + dependencies).
-3. Fork de device tree → `Hayqe/device_xiaomi_houji` en voeg de OTA-overlay
-   (`UpdaterOverlayHouji`) + AVB-override toe (zelfde patroon als garnet).
+> Alternatief: `lolipuru/android_device_xiaomi_houji` (lineage-23.0), maar die is
+> gemarkeerd als "force/incomplete push".
+
+Vendor blobs (`vendor/xiaomi/houji` + `vendor/xiaomi/sm8650-common`) extraheer je
+zelf met `./extract-vendor.sh` uit een stock HyperOS-ROM.
 
 ---
 
@@ -87,6 +88,8 @@ sudo ./fix-host.sh
 | `release.sh` | Publiceert een nieuwe build als OTA (SourceForge-upload + JSON) |
 | `setup-keys.sh` | Kopieert release-signing keys naar de build-tree (release-keys) |
 | `fix-host.sh` | Herstelt swap + systemd-oomd (host-voorwaarden voor de build) |
+| `extract-vendor.sh` | Extraheert vendor blobs uit een stock HyperOS-ROM |
+| `local_manifests/houji.xml` | Device tree + dependencies (mvaisakh lineage-23.2) |
 | `ota/houji.json` | OTA-metadata die de Updater-app op het toestel uitleest |
 | `src/` | De volledige AOSP/EvolutionX-bron |
 | `ccache/` | Persistente ccache (versnelt volgende builds) |
