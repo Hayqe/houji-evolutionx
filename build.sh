@@ -31,6 +31,9 @@ docker exec houji-builder bash -c '
   echo "=== repo sync ==="
   repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
 
+  echo "=== git lfs pull (GApps) ==="
+  (cd vendor/gms && git lfs pull)
+
   echo "=== build (m evolution -j16) ==="
   source build/envsetup.sh
   lunch lineage_houji-userdebug
