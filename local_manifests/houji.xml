@@ -12,6 +12,6 @@
   <project name="Evolution-X-Devices/hardware_xiaomi" path="hardware/xiaomi" remote="github-non-los" revision="bka-no-dolby" />
 
   <!-- Vendor blobs (privé → SSH via gemounte ~/.ssh) -->
-  <project name="Hayqe/proprietary_vendor_xiaomi_houji" path="vendor/xiaomi/houji" remote="github" revision="main" />
-  <project name="Hayqe/proprietary_vendor_xiaomi_sm8650-common" path="vendor/xiaomi/sm8650-common" remote="github" revision="main" />
+  <project name="Hayqe/proprietary_vendor_xiaomi_houji" path="vendor/xiaomi/houji" remote="private" revision="main" />
+  <project name="Hayqe/proprietary_vendor_xiaomi_sm8650-common" path="vendor/xiaomi/sm8650-common" remote="private" revision="main" />
 </manifest>
