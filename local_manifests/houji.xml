@@ -6,7 +6,7 @@
 
   <project name="Hayqe/android_device_xiaomi_houji" path="device/xiaomi/houji" remote="github-non-los" revision="lineage-23.2" />
   <project name="Hayqe/android_device_xiaomi_sm8650-common" path="device/xiaomi/sm8650-common" remote="github-non-los" revision="lineage-23.2" />
-  <project name="lolipuru/device_xiaomi_houji-kernel" path="device/xiaomi/houji-kernel" remote="github-non-los" revision="lineage-23.0" />
+  <project name="Hayqe/device_xiaomi_houji-kernel" path="device/xiaomi/houji-kernel" remote="github-non-los" revision="lineage-23.0" />
 
   <!-- hardware/xiaomi (SM8650 HALs) -->
   <project name="Evolution-X-Devices/hardware_xiaomi" path="hardware/xiaomi" remote="github-non-los" revision="bka-no-dolby" />
