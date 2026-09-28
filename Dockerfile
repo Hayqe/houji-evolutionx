@@ -38,6 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     lz4 \
     lzop \
     openjdk-17-jdk \
+    openssh-client \
     pngcrush \
     python3 \
     python-is-python3 \
