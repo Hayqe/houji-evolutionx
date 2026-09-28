@@ -16,6 +16,7 @@ if ! docker ps --format '{{.Names}}' | grep -qx houji-builder; then
       --device /dev/fuse \
       -v "$(pwd)/src:/src" \
       -v "$(pwd)/ccache:/ccache" \
+      -v "$HOME/.ssh:/home/ubuntu/.ssh:ro" \
       evolutionx-builder sleep infinity
   fi
 fi

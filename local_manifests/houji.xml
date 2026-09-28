@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- houji (Xiaomi 14, SM8650 / Snapdragon 8 Gen 3)
-       Basis: mvaisakh's LineageOS-tree, branch lineage-23.2 (Android 16).
-       NB: de vendor blobs (vendor/xiaomi/houji + vendor/xiaomi/sm8650-common)
-           extraheer je met ./extract-vendor.sh en voeg je daarna hieronder toe. -->
+       Device trees: eigen forks (OTA-overlay + AVB + blob-fixes, lineage-23.2).
+       Vendor blobs: eigen privé-repo's (via SSH). -->
 
-  <project name="mvaisakh/android_device_xiaomi_houji" path="device/xiaomi/houji" remote="github-non-los" revision="lineage-23.2" />
-  <project name="mvaisakh/android_device_xiaomi_sm8650-common" path="device/xiaomi/sm8650-common" remote="github-non-los" revision="lineage-23.2" />
+  <project name="Hayqe/android_device_xiaomi_houji" path="device/xiaomi/houji" remote="github-non-los" revision="lineage-23.2" />
+  <project name="Hayqe/android_device_xiaomi_sm8650-common" path="device/xiaomi/sm8650-common" remote="github-non-los" revision="lineage-23.2" />
   <project name="mvaisakh/android_device_houji-kernel" path="device/xiaomi/houji-kernel" remote="github-non-los" revision="16" />
 
-  <!-- hardware/xiaomi (SM8650 HALs) — zelfde als garnet -->
+  <!-- hardware/xiaomi (SM8650 HALs) -->
   <project name="Evolution-X-Devices/hardware_xiaomi" path="hardware/xiaomi" remote="github-non-los" revision="bka-no-dolby" />
 
-  <!-- TODO: vendor blobs (na extractie met ./extract-vendor.sh):
-  <project name="Hayqe/proprietary_vendor_xiaomi_houji" path="vendor/xiaomi/houji" remote="github-non-los" revision="..." />
-  <project name="Hayqe/proprietary_vendor_xiaomi_sm8650-common" path="vendor/xiaomi/sm8650-common" remote="github-non-los" revision="..." />
-  -->
+  <!-- Vendor blobs (privé → SSH via gemounte ~/.ssh) -->
+  <project name="Hayqe/proprietary_vendor_xiaomi_houji" path="vendor/xiaomi/houji" remote="github" revision="main" />
+  <project name="Hayqe/proprietary_vendor_xiaomi_sm8650-common" path="vendor/xiaomi/sm8650-common" remote="github" revision="main" />
 </manifest>
