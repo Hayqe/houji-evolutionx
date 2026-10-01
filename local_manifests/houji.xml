@@ -11,6 +11,15 @@
   <!-- hardware/xiaomi (SM8650 HALs) -->
   <project name="Evolution-X-Devices/hardware_xiaomi" path="hardware/xiaomi" remote="github-non-los" revision="bka-no-dolby" />
 
+  <!-- graphservices: eigen fork met gpr_receiver_tid-backport (audio-HAL OS3.0.303.0 heeft dit symbool nodig).
+       remove-project matcht op NAAM en verwijdert alle 5 SoC-checkouts; de andere 4 dus terugzetten op LineageOS. -->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" />
+  <project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8450/audio/graphservices" remote="github" revision="lineage-23.2-caf-sm8450" />
+  <project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8450-6.6/audio/graphservices" remote="github" revision="lineage-23.2-caf-sm8450-6.6" />
+  <project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8550/audio/graphservices" remote="github" revision="lineage-23.2-caf-sm8550" />
+  <project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8750/audio/graphservices" remote="github" revision="lineage-23.2-caf-sm8750" />
+  <project name="Hayqe/android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8650/audio/graphservices" remote="github-non-los" revision="lineage-23.2-caf-sm8650" />
+
   <!-- Vendor blobs (privé → SSH via gemounte ~/.ssh) -->
   <project name="Hayqe/proprietary_vendor_xiaomi_houji" path="vendor/xiaomi/houji" remote="private" revision="main" />
   <project name="Hayqe/proprietary_vendor_xiaomi_sm8650-common" path="vendor/xiaomi/sm8650-common" remote="private" revision="main" />
