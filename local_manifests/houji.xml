@@ -23,8 +23,4 @@
   <!-- Vendor blobs (privé → SSH via gemounte ~/.ssh) -->
   <project name="Hayqe/proprietary_vendor_xiaomi_houji" path="vendor/xiaomi/houji" remote="private" revision="main" />
   <project name="Hayqe/proprietary_vendor_xiaomi_sm8650-common" path="vendor/xiaomi/sm8650-common" remote="private" revision="main" />
-
-  <!-- erofs-utils: eigen fork met LZMA aan (kernel ondersteunt alleen EROFS LZMA; AOSP mkfs.erofs mist LZMA) -->
-  <remove-project name="platform/external/erofs-utils" />
-  <project name="Hayqe/external_erofs-utils" path="external/erofs-utils" remote="github-non-los" revision="android-16.0.0_r4" />
 </manifest>
